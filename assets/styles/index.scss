@@ -1,1 +1,27 @@
 @import '~bootstrap/scss/bootstrap';
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1%;
+}
+
+.btn {
+  background-color: #38b6ff;
+}
+
+#logo {
+  width: 10%;
+  height: auto;
+  border: 1px solid white;
+  border-radius: 30%;
+  padding: 1%;
+}
+
+.sign-up-hide {
+  display: none;
+}
+
+.change-pwd-hide {
+  display: none;
+}

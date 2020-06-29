@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Quick Sale</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,68 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
-    </body>
+      <p id="messages"></p>
+      <section class="logo">
+        <img src="./assets/images/Quick_Sale.png" alt="logo" id="logo">
+      </section>
+      <section class="sign-in-hide">
+        <section class="container-fluid">
+          <section class="row justify-content-center">
+            <section class="col-12 col-sm-6 col-md-4">
+              <form id="signIn" class="form-container">
+                <div class="form-group">
+                  <h4 class="text-center font-weight-bold"> Sign In </h4>
+                  <label for="InputEmail1">Email Address</label>
+                  <input type="email" class="form-control" name="credentials[email]" placeholder="Enter email">
+               </div>
+               <div class="form-group">
+                <label for="InputPassword1">Password</label>
+                <input type="password" name="credentials[password]" class="form-control" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+              <div class="form-footer">
+                <p> Don't have an account? <a href="#" id="tosignup">Sign Up</a></p>
+              </div>
+          </form>
+        </section>
+      </section>
+    </section>
+  </section>
+  <section class="sign-up-hide">
+    <section class="container-fluid">
+      <section class="row justify-content-center">
+        <section class="col-12 col-sm-6 col-md-4">
+          <form id="signUp" class="form-container">
+            <div class="form-group">
+              <h4 class="text-center font-weight-bold"> Sign Up </h4>
+              <label for="InputEmail1">Email Address</label>
+              <input type="email" class="form-control" name="credentials[email]" placeholder="Enter email">
+           </div>
+           <div class="form-group">
+            <label for="InputPassword1">Password</label>
+            <input type="password" name="credentials[password]" class="form-control" placeholder="Password">
+          </div>
+          <div class="form-group">
+           <label for="InputPassword1">Password Confirmation</label>
+           <input type="password" name="credentials[password_confirmation]" class="form-control" placeholder="Password Confirmation">
+         </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          <div class="form-footer">
+            <p> Already have an account? <a href="#" id="tosignin">Sign In</a></p>
+          </div>
+      </form>
+    </section>
+  </section>
+</section>
+</section>
+
+   <div class="change-pwd-hide">
+    <h3>ChangePW</h3>
+    <form id="changePWD-hide">
+        <input required placeholder="Current Password" name="passwords[old]" type="password">
+        <input required placeholder="New Password" name="passwords[new]" type="password">
+        <button type="Submit">Change</button>
+      </form>
+    </div>
+  </body>
 </html>
