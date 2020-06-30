@@ -9,10 +9,17 @@ curl "${API}${URL_PATH}/${ID}" \
   --header "Content-Type: application/json" \
 --header "Authorization: Bearer ${TOKEN}" \
 --data '{
-    "house": {
-      "description": "'"${DESCRIPTION}"'",
-      "askingprice": "'"${PRICE}"'"
-    }
-  }'
+  "house": {
+    "description": "'"${DESCRIPTION}"'",
+    "beds": "'"${BEDS}"'",
+    "baths": "'"${BATHS}"'",
+    "sqft": "'"${SQFT}"'",
+    "askingprice": "'"${PRICE}"'",
+    "closingdate": "'"${DATE}"'",
+    "closingattorney": "'"${ATTORNEY}"'",
+    "emdeposit": "'"${DEPOSIT}"'",
+    "listingphone": "'"${PHONE}"'"
+  }
+}'
 
 echo

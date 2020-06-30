@@ -12,7 +12,14 @@ curl "${API}${URL_PATH}" \
     "house": {
       "address": "'"${ADDRESS}"'",
       "description": "'"${DESCRIPTION}"'",
+      "beds": "'"${BEDS}"'",
+      "baths": "'"${BATHS}"'",
+      "sqft": "'"${SQFT}"'",
       "askingprice": "'"${PRICE}"'",
+      "closingdate": "'"${DATE}"'",
+      "closingattorney": "'"${ATTORNEY}"'",
+      "emdeposit": "'"${DEPOSIT}"'",
+      "listingphone": "'"${PHONE}"'",
       "owner": "'"${OWNERID}"'"
     }
   }'
