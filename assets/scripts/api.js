@@ -54,9 +54,20 @@ const getHouses = function () {
   })
 }
 
+const getMyHouses = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/houses',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePWD,
-  getHouses
+  getHouses,
+  getMyHouses
 }

@@ -1,0 +1,27 @@
+{{#if houses}}
+{{#each houses as |house|}}
+  {{log house}}
+  <section class="house-block" data-id="{{house.id}}">
+    <section class="address">
+      {{house.address}} {{house.askingprice}}
+    </section>
+    <section class="house-content">
+      <section class="image-block">
+        <img src="./assets/images/coming-soon.jpg" alt="image" id="image">
+      </section>
+      <section class="content-block">
+        <section class="specs">
+          {{house.beds}}beds {{house.baths}}baths {{house.sqft}}sqft
+        </section>
+        <section class="description">
+          {{house.description}}
+      </section>
+      </section>
+    </section>
+  </section>
+
+{{/each}}
+{{else}}
+<p id="nolisting"> You have not posted any listings </p>
+<button class="createlisting">Create A Listing</button>
+{{/if}}

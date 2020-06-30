@@ -10,7 +10,7 @@ $(() => {
   $('#signUp').on('submit', events.onSignUp)
   $('#signIn').on('submit', events.onSignIn)
   $('#changePWD').on('submit', events.onChangePWD)
-
+  $('#mylistings').on('click', events.onGetMyHouses)
   $('#tosignup').on('click', () => { $('.sign-in-hide').hide(); $('.sign-up-hide').show() })
   $('#tosignin').on('click', () => { $('.sign-up-hide').hide(); $('.sign-in-hide').show() })
 })

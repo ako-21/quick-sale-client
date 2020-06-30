@@ -49,9 +49,18 @@ const onGetHouses = function () {
     .catch(ui.getHousesFailure)
 }
 
+const onGetMyHouses = function () {
+  console.log('made it to get my houses')
+  // $('.house-block').hide()
+  api.getMyHouses()
+    .then(ui.getMyHousesSuccess)
+    .catch(ui.getMyHousesFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePWD,
-  onGetHouses
+  onGetHouses,
+  onGetMyHouses
 }
