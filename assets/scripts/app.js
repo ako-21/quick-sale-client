@@ -11,8 +11,6 @@ $(() => {
   $('#signIn').on('submit', events.onSignIn)
   $('#changePWD').on('submit', events.onChangePWD)
 
-
-
   $('#tosignup').on('click', () => { $('.sign-in-hide').hide(); $('.sign-up-hide').show() })
   $('#tosignin').on('click', () => { $('.sign-up-hide').hide(); $('.sign-in-hide').show() })
 })

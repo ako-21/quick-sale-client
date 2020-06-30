@@ -28,6 +28,7 @@ const onSignIn = function (event) {
 
   // create a success or failure response for the user
     .then(ui.signInSuccess)
+    .then(onGetHouses)
     .catch(ui.signInFailure)
 }
 
@@ -40,8 +41,17 @@ const onChangePWD = function (event) {
     .catch(ui.changePWDFailure)
 }
 
+const onGetHouses = function () {
+  console.log('made it here')
+  $('.sign-in-hide').hide()
+  api.getHouses()
+    .then(ui.getHousesSuccess)
+    .catch(ui.getHousesFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
-  onChangePWD
+  onChangePWD,
+  onGetHouses
 }

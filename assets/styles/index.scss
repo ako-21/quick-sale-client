@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 1%;
+  margin-top: 6%;
 }
 
 .btn {
@@ -18,10 +19,31 @@
   padding: 1%;
 }
 
+#messages {
+  text-align: center;
+}
+
+.white {
+  color: white;
+}
+
+.black {
+  color: black;
+}
+
+.headings {
+  color: #2f4f4f;
+  font-size: 40px;
+}
+
 .sign-up-hide {
   display: none;
 }
 
 .change-pwd-hide {
+  display: none;
+}
+
+.hide-nav {
   display: none;
 }

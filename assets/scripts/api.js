@@ -44,8 +44,19 @@ const changePWD = function (data) {
   })
 }
 
+const getHouses = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/houses',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
-  changePWD
+  changePWD,
+  getHouses
 }
