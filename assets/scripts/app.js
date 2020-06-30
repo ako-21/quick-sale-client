@@ -11,6 +11,8 @@ $(() => {
   $('#signIn').on('submit', events.onSignIn)
   $('#changePWD').on('submit', events.onChangePWD)
   $('#mylistings').on('click', events.onGetMyHouses)
+  $('#alllistings').on('click', events.onGetHouses)
   $('#tosignup').on('click', () => { $('.sign-in-hide').hide(); $('.sign-up-hide').show() })
   $('#tosignin').on('click', () => { $('.sign-up-hide').hide(); $('.sign-in-hide').show() })
+  $('#changePWlink').on('click', () => { $('.sign-in-hide').hide(); $('.sign-up-hide').hide(); $('.house-block').hide(); $('.change-pwd-hide').show(); $('#messages').hide() })
 })

@@ -19,10 +19,10 @@ const signUpFailure = function (data) {
 }
 
 const signInSuccess = function (data) {
-  $('#messages').removeClass()
-  $('#messages').text('All Active Listings')
-  $('#messages').addClass('black')
-  $('#messages').addClass('headings')
+  // $('#messages').removeClass()
+  // $('#messages').text('All Active Listings')
+  // $('#messages').addClass('black')
+  // $('#messages').addClass('headings')
   $('form').trigger('reset')
   $('.hide-nav').show()
   // store the user object to access the token
@@ -52,6 +52,12 @@ const changePWDFailure = function () {
 }
 
 const getHousesSuccess = function (data) {
+  $('.change-pwd-hide').hide()
+  $('#messages').show()
+  $('#messages').removeClass()
+  $('#messages').text('All Active Listings')
+  $('#messages').addClass('black')
+  $('#messages').addClass('headings')
   console.log(data.houses)
   store.houses = data.houses
   const showHousesHtml = showHousesTemplate({ houses: data.houses })
@@ -59,6 +65,8 @@ const getHousesSuccess = function (data) {
 }
 
 const getMyHousesSuccess = function (data) {
+  $('.change-pwd-hide').hide()
+  $('#messages').show()
   $('#messages').removeClass()
   $('#messages').text('My Listings')
   $('#messages').addClass('black')

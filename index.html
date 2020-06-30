@@ -21,10 +21,13 @@
     <a class="navbar-brand">User Options</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="#">All Listings <span class="sr-only">(current)</span></a>
+        <a class="nav-link" id="alllistings" href="#">All Listings <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="mylistings" href="#">My Listings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="changePWlink" href="#">Change Password</a>
       </li>
     </ul>
   </div>
@@ -84,14 +87,23 @@
   </section>
 </section>
 </section>
-
-   <div class="change-pwd-hide">
-    <h3>ChangePW</h3>
-    <form id="changePWD-hide">
-        <input required placeholder="Current Password" name="passwords[old]" type="password">
-        <input required placeholder="New Password" name="passwords[new]" type="password">
-        <button type="Submit">Change</button>
-      </form>
-    </div>
-  </body>
-</html>
+<section class="change-pwd-hide">
+  <section class="container-fluid">
+    <section class="row justify-content-center">
+      <section class="col-12 col-sm-6 col-md-4">
+        <form id="changePWD" class="form-container">
+          <div class="form-group">
+            <h4 class="text-center font-weight-bold"> Change Password </h4>
+            <label for="InputPassword1">Current Password</label>
+            <input type="password" class="form-control" name="passwords[old]" placeholder="Current Password">
+         </div>
+         <div class="form-group">
+          <label for="InputPassword1">New Password</label>
+          <input type="password" name="passwords[new]" class="form-control" placeholder="New Password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Change</button>
+    </form>
+  </section>
+</section>
+</section>
+</section>
