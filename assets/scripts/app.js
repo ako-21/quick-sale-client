@@ -15,4 +15,7 @@ $(() => {
   $('#tosignup').on('click', () => { $('.sign-in-hide').hide(); $('.sign-up-hide').show() })
   $('#tosignin').on('click', () => { $('.sign-up-hide').hide(); $('.sign-in-hide').show() })
   $('#changePWlink').on('click', () => { $('.sign-in-hide').hide(); $('.sign-up-hide').hide(); $('.house-block').hide(); $('.change-pwd-hide').show(); $('#messages').hide() })
+  $('#phonenumber').mask('(000) 000-0000')
+  $('.mula').mask('000,000,000,000', {reverse: true})
+  $('.comma').mask('000,000,000', {reverse: true})
 })

@@ -10,6 +10,7 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
     </head>
     <body>
       <section class="hide-nav">
@@ -123,19 +124,19 @@
            </div>
            <div class="form-group">
               <label for="InputBeds">Beds</label>
-              <input required type="number" name="house[beds]" class="form-control" placeholder="How Many Beds?">
+              <input required type="text" name="house[beds]" class="form-control comma" placeholder="How Many Beds?">
           </div>
           <div class="form-group">
               <label for="Inputbaths">Baths</label>
-              <input required type="number" name="house[baths]" class="form-control" placeholder="How Many Baths?">
+              <input required type="text" name="house[baths]" class="form-control comma" placeholder="How Many Baths?">
           </div>
           <div class="form-group">
              <label for="Inputsqft">SQFT</label>
-             <input required type="number" name="house[sqft]" class="form-control" placeholder="How Much Square Feet?">
+             <input required type="text" name="house[sqft]" class="form-control comma" placeholder="How Much Square Feet?">
           </div>
           <div class="form-group">
             <label for="Inputasking">Asking Price</label>
-            <input required type="number" name="house[askingprice]" class="form-control" placeholder="How Much are you Asking?">
+            <input required type="text" name="house[askingprice]" class="form-control mula" placeholder="How Much are you Asking?">
           </div>
           <div class="form-group">
             <label for="Inputasking">Closing Date</label>
@@ -147,11 +148,11 @@
          </div>
          <div class="form-group">
           <label for="Inputdeposit">Deposit</label>
-          <input required type="number" name="house[emdeposit]" class="form-control" placeholder="What's the Required Deposit?">
+          <input required type="text" name="house[emdeposit]" class="form-control mula" placeholder="What's the Required Deposit?">
         </div>
         <div class="form-group">
          <label for="Inputphone">Contact</label>
-         <input type="text" class="form-control" required name="house[listingphone]" placeholder="Listing Contact Number">
+         <input id="phonenumber" type="text" class="form-control" required name="house[listingphone]" placeholder="Listing Contact Number">
         </div>
         <button type="submit" class="btn btn-primary btn-block">Create</button>
     </form>
