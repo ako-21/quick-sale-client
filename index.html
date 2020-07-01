@@ -45,11 +45,11 @@
                 <div class="form-group">
                   <h4 class="text-center font-weight-bold"> Sign In </h4>
                   <label for="InputEmail1">Email Address</label>
-                  <input type="email" class="form-control" name="credentials[email]" placeholder="Enter email">
+                  <input required type="email" class="form-control" name="credentials[email]" placeholder="Enter email">
                </div>
                <div class="form-group">
                 <label for="InputPassword1">Password</label>
-                <input type="password" name="credentials[password]" class="form-control" placeholder="Password">
+                <input required type="password" name="credentials[password]" class="form-control" placeholder="Password">
               </div>
               <button type="submit" class="btn btn-primary btn-block">Submit</button>
               <div class="form-footer">
@@ -68,15 +68,15 @@
             <div class="form-group">
               <h4 class="text-center font-weight-bold"> Sign Up </h4>
               <label for="InputEmail1">Email Address</label>
-              <input type="email" class="form-control" name="credentials[email]" placeholder="Enter email">
+              <input required type="email" class="form-control" name="credentials[email]" placeholder="Enter email">
            </div>
            <div class="form-group">
             <label for="InputPassword1">Password</label>
-            <input type="password" name="credentials[password]" class="form-control" placeholder="Password">
+            <input required type="password" name="credentials[password]" class="form-control" placeholder="Password">
           </div>
           <div class="form-group">
            <label for="InputPassword1">Password Confirmation</label>
-           <input type="password" name="credentials[password_confirmation]" class="form-control" placeholder="Password Confirmation">
+           <input required type="password" name="credentials[password_confirmation]" class="form-control" placeholder="Password Confirmation">
          </div>
           <button type="submit" class="btn btn-primary btn-block">Submit</button>
           <div class="form-footer">
@@ -95,11 +95,11 @@
           <div class="form-group">
             <h4 class="text-center font-weight-bold"> Change Password </h4>
             <label for="InputPassword1">Current Password</label>
-            <input type="password" class="form-control" name="passwords[old]" placeholder="Current Password">
+            <input required type="password" class="form-control" name="passwords[old]" placeholder="Current Password">
          </div>
          <div class="form-group">
           <label for="InputPassword1">New Password</label>
-          <input type="password" name="passwords[new]" class="form-control" placeholder="New Password">
+          <input required type="password" name="passwords[new]" class="form-control" placeholder="New Password">
         </div>
         <button type="submit" class="btn btn-primary btn-block">Change</button>
     </form>
@@ -107,3 +107,63 @@
 </section>
 </section>
 </section>
+<section class="create-hide">
+  <section class="container-fluid">
+    <section class="row justify-content-center">
+      <section class="col-12 col-sm-6 col-md-4">
+        <form id="create" class="form-container">
+            <div class="form-group">
+              <h4 class="text-center font-weight-bold"> Create a Listing </h4>
+              <label for="InputAddress">Address</label>
+              <input required id="autoc" type="text" class="form-control" name="house[address]" placeholder="Enter the Address">
+           </div>
+           <div class="form-group">
+              <label for="InputDescription">Description</label>
+              <input required type="text" name="house[description]" class="form-control" placeholder="Enter a Description">
+           </div>
+           <div class="form-group">
+              <label for="InputBeds">Beds</label>
+              <input required type="number" name="house[beds]" class="form-control" placeholder="How Many Beds?">
+          </div>
+          <div class="form-group">
+              <label for="Inputbaths">Baths</label>
+              <input required type="number" name="house[baths]" class="form-control" placeholder="How Many Baths?">
+          </div>
+          <div class="form-group">
+             <label for="Inputsqft">SQFT</label>
+             <input required type="number" name="house[sqft]" class="form-control" placeholder="How Much Square Feet?">
+          </div>
+          <div class="form-group">
+            <label for="Inputasking">Asking Price</label>
+            <input required type="number" name="house[askingprice]" class="form-control" placeholder="How Much are you Asking?">
+          </div>
+          <div class="form-group">
+            <label for="Inputasking">Closing Date</label>
+            <input required type="date" name="house[closingdate]" class="form-control" placeholder="Desired Closing Date">
+          </div>
+          <div class="form-group">
+           <label for="Inputclosingattorney">Closing Attorney</label>
+           <input required type="text" name="house[closingattorney]" class="form-control" placeholder="Have a Closing Attorney?">
+         </div>
+         <div class="form-group">
+          <label for="Inputdeposit">Deposit</label>
+          <input required type="number" name="house[emdeposit]" class="form-control" placeholder="What's the Required Deposit?">
+        </div>
+        <div class="form-group">
+         <label for="Inputphone">Contact</label>
+         <input type="text" class="form-control" required name="house[listingphone]" placeholder="Listing Contact Number">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Create</button>
+    </form>
+  </section>
+</section>
+</section>
+</section>
+<script>
+  function activatePlacesSearch() {
+    const input = document.getElementById('autoc')
+    const autocomplete = new google.maps.places.Autocomplete(input)
+  }
+</script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgpqpSV2IOBzCEbB-qJRe1KCHKNGF-blw&libraries=places&callback=activatePlacesSearch"></script>
+</body>
