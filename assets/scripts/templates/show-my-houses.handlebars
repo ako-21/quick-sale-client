@@ -1,7 +1,7 @@
 {{#if houses}}
 {{#each houses as |house|}}
   {{log house}}
-  <section class="house-block-parent">
+  <section class="house-block-parent" id="{{house._id}}">
   <section class="house-block" data-id="{{house._id}}">
     <section class="topbar">
       <section class="address">
@@ -55,7 +55,7 @@
       </section>
     </section>
     <button type=button id="edit" data-id="{{house._id}}" class="btn btn-primary btn-block">Edit</button>
-    <button type=button id="delete" data-id="{{house._id}}" class="btn btn-primary btn-block">Delete</button>
+    <button type=button id="delete" data-id="{{house._id}}" data-toggle="modal" data-target="#deleteModal" class="btn btn-primary btn-block">Delete</button>
   </section>
 </section>
 {{/each}}

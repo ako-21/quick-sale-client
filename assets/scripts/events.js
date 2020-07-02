@@ -90,6 +90,20 @@ const onHouseUpdate = function (event) {
     .catch(ui.updateFailure)
 }
 
+const populateModal = function (event) {
+  event.preventDefault()
+  const id = $(event.target).attr('data-id')
+  $('#yesdelete').attr('data-id', id)
+  api.getHouses(event)
+    .then(ui.populateModalSuccess)
+}
+
+const onDeleteHouse = function (event) {
+  event.preventDefault()
+  api.deleteHouse(event)
+    .then(() => ui.deleteHouseSuccess(event))
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
@@ -98,5 +112,7 @@ module.exports = {
   onGetMyHouses,
   onCreate,
   populateForm,
-  onHouseUpdate
+  onHouseUpdate,
+  populateModal,
+  onDeleteHouse
 }

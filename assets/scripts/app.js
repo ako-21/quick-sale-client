@@ -14,6 +14,8 @@ $(() => {
   $('#mylistings').on('click', events.onGetMyHouses)
   $('#alllistings').on('click', events.onGetHouses)
   $('#messages').on('click', '#edit', events.populateForm)
+  $('#messages').on('click', '#delete', events.populateModal)
+  $('#yesdelete').on('click', events.onDeleteHouse)
   $('#editform').on('submit', events.onHouseUpdate)
   $('#tosignup').on('click', () => { $('.sign-in-hide').hide(); $('.sign-up-hide').show() })
   $('#tosignin').on('click', () => { $('.sign-up-hide').hide(); $('.sign-in-hide').show() })
