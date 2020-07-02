@@ -51,6 +51,24 @@ const changePWDFailure = function () {
   $('form').trigger('reset')
 }
 
+const createSuccess = function (data) {
+  console.log(data)
+  $('.create-hide').hide()
+  $('#messages').show()
+  $('#messages').removeClass()
+  $('#messages').text('You have Successfully Created a Listing')
+  $('#messages').addClass('black')
+  $('#messages').addClass('headings')
+}
+
+const createFailure = function () {
+  $('#messages').show()
+  $('#messages').removeClass()
+  $('#messages').text('Something went wrong, try again')
+  $('#messages').addClass('black')
+  $('#messages').addClass('headings')
+}
+
 const getHousesSuccess = function (data) {
   $('.change-pwd-hide').hide()
   $('#messages').show()
@@ -62,6 +80,7 @@ const getHousesSuccess = function (data) {
   store.houses = data.houses
   const showHousesHtml = showHousesTemplate({ houses: data.houses })
   $('#messages').append(showHousesHtml)
+  data.houses.forEach((arr) => { if (store.user._id === arr.owner._id) { $('.house-block').addClass('blueout'); $('.image').css('border-color', '#c1c7c9') } })
 }
 
 const getMyHousesSuccess = function (data) {
@@ -87,5 +106,7 @@ module.exports = {
   changePWDSuccess,
   changePWDFailure,
   getHousesSuccess,
-  getMyHousesSuccess
+  getMyHousesSuccess,
+  createSuccess,
+  createFailure
 }

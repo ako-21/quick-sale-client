@@ -20,7 +20,6 @@ curl "${API}${URL_PATH}" \
       "closingattorney": "'"${ATTORNEY}"'",
       "emdeposit": "'"${DEPOSIT}"'",
       "listingphone": "'"${PHONE}"'",
-      "owner": "'"${OWNERID}"'"
     }
   }'
 

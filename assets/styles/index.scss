@@ -47,3 +47,116 @@
 .hide-nav {
   display: none;
 }
+
+.create-hide {
+  display: none;
+}
+
+.house-block-parent {
+  display: flex;
+  justify-content: center;
+}
+
+.house-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  width: 70%;
+  border-style: inset;
+  border-width: 6px;
+  border-color: #f1f1f1
+}
+
+.topbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1%;
+}
+
+.house-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.content-block {
+  width: 60%;
+  height: auto;
+}
+
+.image-block {
+  width: 40%;
+  height: auto;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  margin-left: 1%;
+  border-style: solid;
+  border-radius: 25px;
+  border-width: 4px;
+  border-color: #38b6ff;
+}
+
+.specs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: #2f4f4f;
+}
+
+.description {
+  text-align: left;
+  padding-top: 3%;
+  padding-left: 3%;
+}
+
+.address, .date {
+  margin-left: 2%;
+  font-weight: bold;
+}
+
+.askprice, .deposit {
+  margin-right: 2%;
+  color: red;
+  font-weight: bold;
+}
+
+.extras {
+  margin-top: 2%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom-width: 2px;
+  border-bottom-color: #f1f1f1;
+  border-bottom-style: solid;
+}
+
+.attorney {
+  color: #2f4f4f;
+}
+
+.contacts {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.blueout {
+  background-color: #F5FCFF;
+}
+
+#edit, #delete {
+  width: 25%;
+  margin-top: 1%;
+}

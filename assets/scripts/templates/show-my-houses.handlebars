@@ -1,27 +1,64 @@
 {{#if houses}}
 {{#each houses as |house|}}
   {{log house}}
-  <section class="house-block" data-id="{{house.id}}">
-    <section class="address">
-      {{house.address}} {{house.askingprice}}
+  <section class="house-block-parent">
+  <section class="house-block" data-id="{{house._id}}">
+    <section class="topbar">
+      <section class="address">
+      {{address house.address}}
+     </section>
+     <section class="askprice">
+       ${{house.askingprice}}
+     </section>
     </section>
     <section class="house-content">
       <section class="image-block">
-        <img src="./assets/images/coming-soon.jpg" alt="image" id="image">
+        <img src="./assets/images/coming-soon.jpg" alt="image" class="image">
       </section>
       <section class="content-block">
         <section class="specs">
-          {{house.beds}}beds {{house.baths}}baths {{house.sqft}}sqft
+          <section class="bedcount">
+          {{house.beds}}beds
+          </section>
+          <section class="bathcount">
+            {{house.baths}}baths
+          </section>
+          <section class="sqftcount">
+            {{house.sqft}}sqft
+          </section>
         </section>
         <section class="description">
           {{house.description}}
       </section>
       </section>
     </section>
+    <section class="extras">
+      <section class="date">
+        <h4>Closing Date</h4>
+        <p>{{house.closingdate}}</p>
+      </section>
+      <section class="attorney">
+        <h4>Closing Attorney</h4>
+        <p>{{house.closingattorney}}</p>
+      </section>
+      <section class="deposit">
+        <h4>Deposit</h4>
+        <p>{{house.emdeposit}}
+      </section>
+    </section>
+    <section class="contacts">
+      <section class="telnum">
+        {{house.listingphone}}
+      </section>
+      <section class="mail">
+        {{house.owner.email}}
+      </section>
+    </section>
+    <button type=button id="edit" class="btn btn-primary btn-block">Edit</button><button type=button id="delete" class="btn btn-primary btn-block">Delete</button>
   </section>
-
+</section>
 {{/each}}
 {{else}}
 <p id="nolisting"> You have not posted any listings </p>
-<button class="createlisting">Create A Listing</button>
+<button class="createlisting btn btn-primary btn-block">Create A Listing</button>
 {{/if}}

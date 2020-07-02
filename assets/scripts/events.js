@@ -41,6 +41,16 @@ const onChangePWD = function (event) {
     .catch(ui.changePWDFailure)
 }
 
+const onCreate = function (event) {
+  console.log('made it to create')
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  api.create(data)
+    .then(ui.createSuccess)
+    .catch(ui.createFailure)
+}
+
 const onGetHouses = function () {
   console.log('made it here')
   $('.sign-in-hide').hide()
@@ -62,5 +72,6 @@ module.exports = {
   onSignIn,
   onChangePWD,
   onGetHouses,
-  onGetMyHouses
+  onGetMyHouses,
+  onCreate
 }
