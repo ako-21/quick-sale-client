@@ -67,11 +67,36 @@ const onGetMyHouses = function () {
     .catch(ui.getMyHousesFailure)
 }
 
+const populateForm = function (event) {
+  event.preventDefault()
+  $('.house-block-parent').hide()
+  $('.edit-hide').show()
+  const id = $(event.target).attr('data-id')
+  $('#editform').attr('data-id', id)
+  $('#editsubmit').attr('data-id', id)
+  api.getHouses(event)
+    .then(ui.populateFormSuccess)
+}
+
+const onHouseUpdate = function (event) {
+  event.preventDefault()
+  console.log('made it to update in events')
+  const form = event.target
+  const data = getFormFields(form)
+  console.log(event.target)
+  console.log(data)
+  api.update(data)
+    .then(ui.updateSuccess)
+    .catch(ui.updateFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePWD,
   onGetHouses,
   onGetMyHouses,
-  onCreate
+  onCreate,
+  populateForm,
+  onHouseUpdate
 }

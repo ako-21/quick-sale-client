@@ -69,6 +69,30 @@ const create = function (data) {
   })
 }
 
+const update = function (data) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/houses/' + $(event.target).attr('data-id'),
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      house: {
+        description: data.house.description,
+        beds: data.house.beds,
+        baths: data.house.baths,
+        sqft: data.house.sqft,
+        askingprice: data.house.askingprice,
+        closingdate: data.house.closingdate,
+        closingattorney: data.house.closingattorney,
+        emdeposit: data.house.emdeposit,
+        listingphone: data.house.listingphone
+        // owner: data.house.owner
+      }
+    }
+  })
+}
+
 const getHouses = function () {
   return $.ajax({
     method: 'GET',
@@ -95,5 +119,6 @@ module.exports = {
   changePWD,
   getHouses,
   getMyHouses,
-  create
+  create,
+  update
 }

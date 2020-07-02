@@ -21,7 +21,7 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <a class="navbar-brand">User Options</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" id="alllistings" href="#">All Listings <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
@@ -155,9 +155,61 @@
         </div>
         <div class="form-group">
          <label for="Inputphone">Contact</label>
-         <input id="phonenumber" type="text" class="form-control" required name="house[listingphone]" placeholder="Listing Contact Number">
+         <input type="text" class="form-control phonenumber" required name="house[listingphone]" placeholder="Listing Contact Number">
         </div>
         <button type="submit" class="btn btn-primary btn-block">Create</button>
+    </form>
+  </section>
+</section>
+</section>
+</section>
+<section class="edit-hide">
+  <section class="container-fluid">
+    <section class="row justify-content-center">
+      <section class="col-12 col-sm-6 col-md-4">
+        <form id="editform" class="form-container">
+            <div class="form-group">
+              <h4 class="text-center font-weight-bold"> Edit Your Listing </h4>
+              <label for="InputAddress">Address</label>
+              <input required type="text" id="place1" class="form-control autoc" name="house[address]" placeholder="Enter the Address" disabled>
+           </div>
+           <div class="form-group">
+              <label for="InputDescription">Description</label>
+              <textarea required name="house[description]" id="place2" class="form-control" rows="3" placeholder="Enter a Description"></textarea>
+           </div>
+           <div class="form-group">
+              <label for="InputBeds">Beds</label>
+              <input required type="text" name="house[beds]" id="place3" class="form-control comma" placeholder="How Many Beds?">
+          </div>
+          <div class="form-group">
+              <label for="Inputbaths">Baths</label>
+              <input required type="text" name="house[baths]" id="place4" class="form-control comma" placeholder="How Many Baths?">
+          </div>
+          <div class="form-group">
+             <label for="Inputsqft">SQFT</label>
+             <input required type="text" name="house[sqft]" id="place5" class="form-control comma" placeholder="How Much Square Feet?">
+          </div>
+          <div class="form-group">
+            <label for="Inputasking">Asking Price</label>
+            <input required type="text" name="house[askingprice]" id="place6" class="form-control mula" placeholder="How Much are you Asking?">
+          </div>
+          <div class="form-group">
+            <label for="Inputasking">Closing Date</label>
+            <input required type="date" name="house[closingdate]" id="place7" class="form-control" placeholder="Desired Closing Date">
+          </div>
+          <div class="form-group">
+           <label for="Inputclosingattorney">Closing Attorney</label>
+           <input required type="text" name="house[closingattorney]" id="place8" class="form-control" placeholder="Have a Closing Attorney?">
+         </div>
+         <div class="form-group">
+          <label for="Inputdeposit">Deposit</label>
+          <input required type="text" name="house[emdeposit]" id="place9" class="form-control mula" placeholder="What's the Required Deposit?">
+        </div>
+        <div class="form-group">
+         <label for="Inputphone">Contact</label>
+         <input type="text" class="form-control phonenumber" id="place10" required name="house[listingphone]" placeholder="Listing Contact Number">
+        </div>
+        <button type="submit" id=editsubmit class="btn btn-primary btn-block">Submit</button>
     </form>
   </section>
 </section>

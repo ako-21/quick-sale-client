@@ -54,7 +54,8 @@
         {{house.owner.email}}
       </section>
     </section>
-    <button type=button id="edit" class="btn btn-primary btn-block">Edit</button><button type=button id="delete" class="btn btn-primary btn-block">Delete</button>
+    <button type=button id="edit" data-id="{{house._id}}" class="btn btn-primary btn-block">Edit</button>
+    <button type=button id="delete" data-id="{{house._id}}" class="btn btn-primary btn-block">Delete</button>
   </section>
 </section>
 {{/each}}

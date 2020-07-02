@@ -70,7 +70,9 @@ const createFailure = function () {
 }
 
 const getHousesSuccess = function (data) {
+  $('.create-hide').hide()
   $('.change-pwd-hide').hide()
+  $('.edit-hide').hide()
   $('#messages').show()
   $('#messages').removeClass()
   $('#messages').text('All Active Listings')
@@ -84,7 +86,9 @@ const getHousesSuccess = function (data) {
 }
 
 const getMyHousesSuccess = function (data) {
+  $('.create-hide').hide()
   $('.change-pwd-hide').hide()
+  $('.edit-hide').hide()
   $('#messages').show()
   $('#messages').removeClass()
   $('#messages').text('My Listings')
@@ -98,6 +102,40 @@ const getMyHousesSuccess = function (data) {
   $('#messages').append(showMyHousesHtml)
 }
 
+const populateFormSuccess = function (data) {
+  store.houses = data.houses
+  const myHouse = data.houses.filter((arr) => { return arr._id === $('#editform').attr('data-id') })
+  console.log(myHouse)
+  console.log(myHouse[0].address)
+  $('#place1').val(myHouse[0].address)
+  $('#place2').val(myHouse[0].description)
+  $('#place3').val(myHouse[0].beds)
+  $('#place4').val(myHouse[0].baths)
+  $('#place5').val(myHouse[0].sqft)
+  $('#place6').val(myHouse[0].askingprice)
+  $('#place7').val(myHouse[0].closingdate)
+  $('#place8').val(myHouse[0].closingattorney)
+  $('#place9').val(myHouse[0].emdeposit)
+  $('#place10').val(myHouse[0].listingphone)
+}
+
+const updateSuccess = function () {
+  $('.edit-hide').hide()
+  $('#messages').show()
+  $('#messages').removeClass()
+  $('#messages').text('Updated Successfully')
+  $('#messages').addClass('black')
+  $('#messages').addClass('headings')
+}
+
+const updateFailure = function () {
+  $('#messages').show()
+  $('#messages').removeClass()
+  $('#messages').text('Something went wrong, try again')
+  $('#messages').addClass('black')
+  $('#messages').addClass('headings')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -108,5 +146,8 @@ module.exports = {
   getHousesSuccess,
   getMyHousesSuccess,
   createSuccess,
-  createFailure
+  createFailure,
+  populateFormSuccess,
+  updateSuccess,
+  updateFailure
 }
