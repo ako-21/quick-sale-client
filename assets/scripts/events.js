@@ -98,6 +98,12 @@ const populateModal = function (event) {
     .then(ui.populateModalSuccess)
 }
 
+const populateDescModal = function (event) {
+  event.preventDefault()
+  api.getHouse(event)
+    .then(ui.populateDescModalSuccess)
+}
+
 const onDeleteHouse = function (event) {
   event.preventDefault()
   api.deleteHouse(event)
@@ -114,5 +120,6 @@ module.exports = {
   populateForm,
   onHouseUpdate,
   populateModal,
-  onDeleteHouse
+  onDeleteHouse,
+  populateDescModal
 }

@@ -71,6 +71,7 @@ const createFailure = function () {
 
 const getHousesSuccess = function (data) {
   $('.create-hide').hide()
+  $('.create-listing-button-block').hide()
   $('.change-pwd-hide').hide()
   $('.edit-hide').hide()
   $('#messages').show()
@@ -80,17 +81,13 @@ const getHousesSuccess = function (data) {
   $('#messages').addClass('headings')
   console.log(data.houses)
   store.houses = data.houses
-//  data.houses.forEach((arr) => { if (store.user._id === arr.owner._id) { $('.house-block').addClass('blueout'); $('.image').css('border-color', '#c1c7c9') } else { $('.house-block').removeClass('blueout'); $('.image').css('border-color', '#38b6ff') } console.log(arr.owner._id + ' ' + store.user._id) })
-  // const myHouses = data.houses.filter((arr) => { return store.user._id === arr.owner._id })
-  // myHouses.forEach(() => { $('.house-block').addClass('blueout'); $('.image').css('border-color', '#c1c7c9') })
   const showHousesHtml = showHousesTemplate({ houses: data.houses })
   $('#messages').append(showHousesHtml)
-  const myHouses = data.houses.filter((arr) => { return store.user._id === arr.owner._id })
-  myHouses.forEach(() => { $('.house-block').addClass('blueout'); $('.image').css('border-color', '#c1c7c9') })
 }
 
 const getMyHousesSuccess = function (data) {
   $('.create-hide').hide()
+  $('.create-listing-button-block').hide()
   $('.change-pwd-hide').hide()
   $('.edit-hide').hide()
   $('#messages').show()
@@ -128,6 +125,11 @@ const populateModalSuccess = function (data) {
   const myHouse = data.houses.filter((arr) => { return arr._id === $('#yesdelete').attr('data-id') })
   console.log(myHouse)
   $('#deletemessage').text('Delete ' + myHouse[0].address + ' ?')
+}
+
+const populateDescModalSuccess = function (data) {
+  console.log(data)
+  $('#fulldesc').text(data.house.description)
 }
 
 const updateSuccess = function () {
@@ -169,5 +171,6 @@ module.exports = {
   updateSuccess,
   updateFailure,
   populateModalSuccess,
-  deleteHouseSuccess
+  deleteHouseSuccess,
+  populateDescModalSuccess
 }

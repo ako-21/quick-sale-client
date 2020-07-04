@@ -1,4 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@1,300&display=swap');
 
 .logo {
   display: flex;
@@ -21,6 +23,7 @@
 
 #messages {
   text-align: center;
+  font-family: 'Balsamiq Sans', cursive;
 }
 
 .white {
@@ -119,6 +122,9 @@
   text-align: left;
   padding-top: 3%;
   padding-left: 3%;
+  font-family: 'Cormorant Infant', serif;
+  font-size: 2vw;
+  font-style: bold;
 }
 
 .address, .date {
@@ -145,6 +151,7 @@
 
 .attorney {
   color: #2f4f4f;
+  font-size: 2vw;
 }
 
 .contacts {
@@ -152,8 +159,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 2vw;
 }
 
 .blueout {
@@ -167,4 +175,27 @@
 
 #nodelete {
   background-color: #2f4f4f;
+}
+
+.create-listing-button-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#createlisting {
+  width: 25%;
+}
+
+.sans, #nolisting {
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+.blue {
+  color: #38b6ff;
+}
+
+.address, .specs, .askprice, .deposit, .date, h4 {
+  font-size: 3vw;
 }

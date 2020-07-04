@@ -3,10 +3,10 @@
   <section class="house-block-parent">
   <section class="house-block" data-id="{{house._id}}">
     <section class="topbar">
-      <section class="address">
+      <section class="address sans">
       {{address house.address}}
      </section>
-     <section class="askprice">
+     <section class="askprice sans">
        ${{house.askingprice}}
      </section>
     </section>
@@ -16,36 +16,36 @@
       </section>
       <section class="content-block">
         <section class="specs">
-          <section class="bedcount">
+          <section class="bedcount sans blue">
           {{house.beds}}beds
           </section>
-          <section class="bathcount">
+          <section class="bathcount sans blue">
             {{house.baths}}baths
           </section>
-          <section class="sqftcount">
+          <section class="sqftcount sans blue">
             {{house.sqft}}sqft
           </section>
         </section>
         <section class="description">
-          {{house.description}}
+          <p id="descriptionpar" data-toggle="modal" data-target="#descModal" data-id="{{house._id}}">{{{limit house.description 331}}}</p>
       </section>
       </section>
     </section>
     <section class="extras">
       <section class="date">
         <h4>Closing Date</h4>
-        <p>{{house.closingdate}}</p>
+        <p class="sans">{{house.closingdate}}</p>
       </section>
       <section class="attorney">
         <h4>Closing Attorney</h4>
-        <p>{{house.closingattorney}}</p>
+        <p class="sans">{{house.closingattorney}}</p>
       </section>
       <section class="deposit">
         <h4>Deposit</h4>
-        <p>{{house.emdeposit}}
+        <p class="sans">{{house.emdeposit}}
       </section>
     </section>
-    <section class="contacts">
+    <section class="contacts sans blue">
       <section class="telnum">
         {{house.listingphone}}
       </section>

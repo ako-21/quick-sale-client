@@ -123,6 +123,16 @@ const deleteHouse = function () {
   })
 }
 
+const getHouse = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/houses/' + $(event.target).parent().attr('data-id'),
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
@@ -131,5 +141,6 @@ module.exports = {
   getMyHouses,
   create,
   update,
-  deleteHouse
+  deleteHouse,
+  getHouse
 }
