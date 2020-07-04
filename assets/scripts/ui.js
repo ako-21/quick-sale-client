@@ -27,7 +27,7 @@ const signInSuccess = function (data) {
   $('.hide-nav').show()
   // store the user object to access the token
   store.user = data.user
-  console.log(data)
+  // console.log(data)
 }
 
 const signInFailure = function () {
@@ -52,7 +52,7 @@ const changePWDFailure = function () {
 }
 
 const createSuccess = function (data) {
-  console.log(data)
+  // console.log(data)
   $('.create-hide').hide()
   $('#messages').show()
   $('#messages').removeClass()
@@ -79,7 +79,7 @@ const getHousesSuccess = function (data) {
   $('#messages').text('All Active Listings')
   $('#messages').addClass('black')
   $('#messages').addClass('headings')
-  console.log(data.houses)
+  // console.log(data.houses)
   store.houses = data.houses
   const showHousesHtml = showHousesTemplate({ houses: data.houses })
   $('#messages').append(showHousesHtml)
@@ -95,10 +95,10 @@ const getMyHousesSuccess = function (data) {
   $('#messages').text('My Listings')
   $('#messages').addClass('black')
   $('#messages').addClass('headings')
-  console.log(data.houses)
+  // console.log(data.houses)
   store.houses = data.houses
   const myHouses = data.houses.filter((arr) => { return store.user._id === arr.owner._id })
-  console.log(myHouses)
+  // console.log(myHouses)
   const showMyHousesHtml = showMyHousesTemplate({ houses: myHouses })
   $('#messages').append(showMyHousesHtml)
 }
@@ -106,8 +106,8 @@ const getMyHousesSuccess = function (data) {
 const populateFormSuccess = function (data) {
   store.houses = data.houses
   const myHouse = data.houses.filter((arr) => { return arr._id === $('#editform').attr('data-id') })
-  console.log(myHouse)
-  console.log(myHouse[0].address)
+  // console.log(myHouse)
+  // console.log(myHouse[0].address)
   $('#place1').val(myHouse[0].address)
   $('#place2').val(myHouse[0].description)
   $('#place3').val(myHouse[0].beds)
@@ -123,12 +123,12 @@ const populateFormSuccess = function (data) {
 const populateModalSuccess = function (data) {
   store.houses = data.houses
   const myHouse = data.houses.filter((arr) => { return arr._id === $('#yesdelete').attr('data-id') })
-  console.log(myHouse)
+  // console.log(myHouse)
   $('#deletemessage').text('Delete ' + myHouse[0].address + ' ?')
 }
 
 const populateDescModalSuccess = function (data) {
-  console.log(data)
+  // console.log(data)
   $('#fulldesc').text(data.house.description)
 }
 

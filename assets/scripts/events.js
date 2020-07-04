@@ -42,7 +42,7 @@ const onChangePWD = function (event) {
 }
 
 const onCreate = function (event) {
-  console.log('made it to create')
+  // console.log('made it to create')
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
@@ -52,7 +52,7 @@ const onCreate = function (event) {
 }
 
 const onGetHouses = function () {
-  console.log('made it here')
+  // console.log('made it here')
   $('.sign-in-hide').hide()
   api.getHouses()
     .then(ui.getHousesSuccess)
@@ -60,7 +60,7 @@ const onGetHouses = function () {
 }
 
 const onGetMyHouses = function () {
-  console.log('made it to get my houses')
+  // console.log('made it to get my houses')
   // $('.house-block').hide()
   api.getMyHouses()
     .then(ui.getMyHousesSuccess)
@@ -80,11 +80,11 @@ const populateForm = function (event) {
 
 const onHouseUpdate = function (event) {
   event.preventDefault()
-  console.log('made it to update in events')
+  // console.log('made it to update in events')
   const form = event.target
   const data = getFormFields(form)
-  console.log(event.target)
-  console.log(data)
+  // console.log(event.target)
+  // console.log(data)
   api.update(data)
     .then(ui.updateSuccess)
     .catch(ui.updateFailure)
