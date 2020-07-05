@@ -133,6 +133,16 @@ const getHouse = function () {
   })
 }
 
+const signOut = function () {
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + '/sign-out',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
@@ -142,5 +152,6 @@ module.exports = {
   create,
   update,
   deleteHouse,
-  getHouse
+  getHouse,
+  signOut
 }

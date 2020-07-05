@@ -110,6 +110,12 @@ const onDeleteHouse = function (event) {
     .then(() => ui.deleteHouseSuccess(event))
 }
 
+const onSignOut = function (event) {
+  event.preventDefault()
+  api.signOut()
+    .then(ui.signOutSuccess)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
@@ -121,5 +127,6 @@ module.exports = {
   onHouseUpdate,
   populateModal,
   onDeleteHouse,
-  populateDescModal
+  populateDescModal,
+  onSignOut
 }

@@ -10,6 +10,7 @@ $(() => {
   $('#signUp').on('submit', events.onSignUp)
   $('#signIn').on('submit', events.onSignIn)
   $('#changePWD').on('submit', events.onChangePWD)
+  $('#signout').on('click', events.onSignOut)
   $('#create').on('submit', events.onCreate)
   $('#mylistings').on('click', events.onGetMyHouses)
   $('#alllistings').on('click', events.onGetHouses)

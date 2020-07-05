@@ -158,6 +158,10 @@ const deleteHouseSuccess = function (event) {
   $('#deleteModal').attr('style', 'display: none')
 }
 
+const signOutSuccess = function () {
+  location.reload(true)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -174,5 +178,6 @@ module.exports = {
   updateFailure,
   populateModalSuccess,
   deleteHouseSuccess,
-  populateDescModalSuccess
+  populateDescModalSuccess,
+  signOutSuccess
 }
