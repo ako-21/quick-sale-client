@@ -38,6 +38,7 @@ const signInFailure = function () {
 }
 
 const changePWDSuccess = function () {
+  $('#messages').show()
   $('#messages').removeClass()
   $('#messages').text('Password successfully changed!')
   $('#messages').addClass('black')
@@ -45,6 +46,7 @@ const changePWDSuccess = function () {
 }
 
 const changePWDFailure = function () {
+  $('#messages').show()
   $('#messages').removeClass()
   $('#messages').text('Current password is not correct.')
   $('#messages').addClass('black')
