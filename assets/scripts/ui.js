@@ -55,6 +55,7 @@ const changePWDFailure = function () {
 
 const createSuccess = function (data) {
   // console.log(data)
+  $('form').trigger('reset')
   $('.create-hide').hide()
   $('#messages').show()
   $('#messages').removeClass()
