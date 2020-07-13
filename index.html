@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Quick Sale</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+    </head>
+    <body>
+      <section class="hide-nav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand">User Options</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" id="alllistings" href="#">All Listings <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="mylistings" href="#">My Listings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="changePWlink" href="#">Change Password</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link createlisting" href="#">Create a Listing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="signout" href="#">Sign Out</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+      </section>
+      <section class="logo">
+        <img src="./public/Quick_Sale.png" alt="logo" id="logo">
+      </section>
+      <p id="messages" class="white">placeholder</p>
+      <section class="sign-in-hide">
+        <section class="container-fluid">
+          <section class="row justify-content-center">
+            <section class="col-12 col-sm-6 col-md-4">
+              <form id="signIn" class="form-container">
+                <div class="form-group">
+                  <h4 class="text-center font-weight-bold"> Sign In </h4>
+                  <label for="InputEmail1">Email Address</label>
+                  <input required type="email" class="form-control" name="credentials[email]" placeholder="Enter email">
+               </div>
+               <div class="form-group">
+                <label for="InputPassword1">Password</label>
+                <input required type="password" name="credentials[password]" class="form-control" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+              <div class="form-footer">
+                <p> Don't have an account? <a href="#" id="tosignup">Sign Up</a></p>
+              </div>
+          </form>
+        </section>
+      </section>
+    </section>
+  </section>
+  <section class="sign-up-hide">
+    <section class="container-fluid">
+      <section class="row justify-content-center">
+        <section class="col-12 col-sm-6 col-md-4">
+          <form id="signUp" class="form-container">
+            <div class="form-group">
+              <h4 class="text-center font-weight-bold"> Sign Up </h4>
+              <label for="InputEmail1">Email Address</label>
+              <input required type="email" class="form-control" name="credentials[email]" placeholder="Enter email">
+           </div>
+           <div class="form-group">
+            <label for="InputPassword1">Password</label>
+            <input required type="password" name="credentials[password]" class="form-control" placeholder="Password">
+          </div>
+          <div class="form-group">
+           <label for="InputPassword1">Password Confirmation</label>
+           <input required type="password" name="credentials[password_confirmation]" class="form-control" placeholder="Password Confirmation">
+         </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          <div class="form-footer">
+            <p> Already have an account? <a href="#" id="tosignin">Sign In</a></p>
+          </div>
+      </form>
+    </section>
+  </section>
+</section>
+</section>
+<section class="change-pwd-hide">
+  <section class="container-fluid">
+    <section class="row justify-content-center">
+      <section class="col-12 col-sm-6 col-md-4">
+        <form id="changePWD" class="form-container">
+          <div class="form-group">
+            <h4 class="text-center font-weight-bold"> Change Password </h4>
+            <label for="InputPassword1">Current Password</label>
+            <input required type="password" class="form-control" name="passwords[old]" placeholder="Current Password">
+         </div>
+         <div class="form-group">
+          <label for="InputPassword1">New Password</label>
+          <input required type="password" name="passwords[new]" class="form-control" placeholder="New Password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Change</button>
+    </form>
+  </section>
+</section>
+</section>
+</section>
+<section class="create-hide">
+  <section class="container-fluid">
+    <section class="row justify-content-center">
+      <section class="col-12 col-sm-6 col-md-4">
+        <form id="create" class="form-container">
+            <div class="form-group">
+              <h4 class="text-center font-weight-bold"> Create a Listing </h4>
+              <label for="InputAddress">Address</label>
+              <input required id="autoc" type="text" class="form-control" name="house[address]" placeholder="Enter the Address">
+           </div>
+           <div class="form-group">
+              <label for="InputDescription">Description</label>
+              <textarea required name="house[description]" class="form-control" rows="3" placeholder="Enter a Description"></textarea>
+           </div>
+           <div class="form-group">
+              <label for="InputBeds">Beds</label>
+              <input required type="text" name="house[beds]" class="form-control comma" placeholder="How Many Beds?">
+          </div>
+          <div class="form-group">
+              <label for="Inputbaths">Baths</label>
+              <input required type="text" name="house[baths]" class="form-control comma" placeholder="How Many Baths?">
+          </div>
+          <div class="form-group">
+             <label for="Inputsqft">SQFT</label>
+             <input required type="text" name="house[sqft]" class="form-control comma" placeholder="How Much Square Feet?">
+          </div>
+          <div class="form-group">
+            <label for="Inputasking">Asking Price</label>
+            <input required type="text" name="house[askingprice]" class="form-control mula" placeholder="How Much are you Asking?">
+          </div>
+          <div class="form-group">
+            <label for="Inputasking">Closing Date</label>
+            <input required type="date" name="house[closingdate]" class="form-control" placeholder="Desired Closing Date">
+          </div>
+          <div class="form-group">
+           <label for="Inputclosingattorney">Closing Attorney</label>
+           <input required type="text" name="house[closingattorney]" class="form-control" placeholder="Have a Closing Attorney?">
+         </div>
+         <div class="form-group">
+          <label for="Inputdeposit">Deposit</label>
+          <input required type="text" name="house[emdeposit]" class="form-control mula" placeholder="What's the Required Deposit?">
+        </div>
+        <div class="form-group">
+         <label for="Inputphone">Contact</label>
+         <input type="text" class="form-control phonenumber" required name="house[listingphone]" placeholder="Listing Contact Number">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Create</button>
+    </form>
+  </section>
+</section>
+</section>
+</section>
+<section class="edit-hide">
+  <section class="container-fluid">
+    <section class="row justify-content-center">
+      <section class="col-12 col-sm-6 col-md-4">
+        <form id="editform" class="form-container">
+            <div class="form-group">
+              <h4 class="text-center font-weight-bold"> Edit Your Listing </h4>
+              <label for="InputAddress">Address</label>
+              <input required type="text" id="place1" class="form-control autoc" name="house[address]" placeholder="Enter the Address" disabled>
+           </div>
+           <div class="form-group">
+              <label for="InputDescription">Description</label>
+              <textarea required name="house[description]" id="place2" class="form-control" rows="3" placeholder="Enter a Description"></textarea>
+           </div>
+           <div class="form-group">
+              <label for="InputBeds">Beds</label>
+              <input required type="text" name="house[beds]" id="place3" class="form-control comma" placeholder="How Many Beds?">
+          </div>
+          <div class="form-group">
+              <label for="Inputbaths">Baths</label>
+              <input required type="text" name="house[baths]" id="place4" class="form-control comma" placeholder="How Many Baths?">
+          </div>
+          <div class="form-group">
+             <label for="Inputsqft">SQFT</label>
+             <input required type="text" name="house[sqft]" id="place5" class="form-control comma" placeholder="How Much Square Feet?">
+          </div>
+          <div class="form-group">
+            <label for="Inputasking">Asking Price</label>
+            <input required type="text" name="house[askingprice]" id="place6" class="form-control mula" placeholder="How Much are you Asking?">
+          </div>
+          <div class="form-group">
+            <label for="Inputasking">Closing Date</label>
+            <input required type="date" name="house[closingdate]" id="place7" class="form-control" placeholder="Desired Closing Date">
+          </div>
+          <div class="form-group">
+           <label for="Inputclosingattorney">Closing Attorney</label>
+           <input required type="text" name="house[closingattorney]" id="place8" class="form-control" placeholder="Have a Closing Attorney?">
+         </div>
+         <div class="form-group">
+          <label for="Inputdeposit">Deposit</label>
+          <input required type="text" name="house[emdeposit]" id="place9" class="form-control mula" placeholder="What's the Required Deposit?">
+        </div>
+        <div class="form-group">
+         <label for="Inputphone">Contact</label>
+         <input type="text" class="form-control phonenumber" id="place10" required name="house[listingphone]" placeholder="Listing Contact Number">
+        </div>
+        <button type="submit" id=editsubmit class="btn btn-primary btn-block">Submit</button>
+    </form>
+  </section>
+</section>
+</section>
+</section>
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Delete This Listing</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="deletemessage">Are you sure you want to delete this listing?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="nodelete" class="btn btn-secondary" data-dismiss="modal">No</button>
+        <button type="button" id="yesdelete" data-toggle="modal" data-target="#deleteModal" class="btn btn-primary">Yes, Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="descModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="descModalLabel">Full Description</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="fulldesc">Full Description</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="closedesc" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function activatePlacesSearch() {
+    const input = document.getElementById('autoc')
+    const autocomplete = new google.maps.places.Autocomplete(input)
+  }
+</script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgpqpSV2IOBzCEbB-qJRe1KCHKNGF-blw&libraries=places&callback=activatePlacesSearch"></script>
+</body>
